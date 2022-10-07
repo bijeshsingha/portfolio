@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    margin: 0;
+    overflow: overlay;
+    min-width: 600px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+    background:white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+::-webkit-scrollbar {
+    width: 12px;
 }
 
-.App-link {
-  color: #61dafb;
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180.01deg, #099EF3 0.85%, #00489B 99.99%);
+  border-radius: 10px;
+  height: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Navbar  */
+.navbar {
+    position: fixed;
+    display: flex;
+    padding: 20px 50px;
+    gap: 2rem;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    background:#06090F;
+    top: 0;
+}
+
+.title{
+    color: white;
+    margin-right: auto;
+    font-family: Kanit;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.brace {
+    background: linear-gradient(180deg, #1979E8 0%, #03A3FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 2px 15px;
+    font-family: Kanit;
+    font-weight: 400;
+    font-size: 20px;
+    color: #A3A3A3;
+    cursor: pointer;
+}
+
+.selected {
+    background: linear-gradient(180deg, #1979E8 0%, #03A3FF 100%);
+    border-radius: 6px;
+    font-weight: 600;
+    color: white;
+}
+
+
+/* Footer */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    background: #06090F;
+    width: 100vw;
+    margin-top: auto;
+    color: rgba(163, 163, 163, 0.67);
+    padding: 20px 50px;
+}
+
+/* Main Content */
+.main-content {
+    margin-top:115px;
+    margin-bottom: 50px;
+}
+
+/* Home */
+.home{
+    height: 90vh;
+    display: flex;
+    gap: 5rem;
+    padding: 25vh;
+    background: #06090F;
+}
+
+.home .title{
+    font-size: 40px;
+    line-height: 50px;
+}
+
+.home .name{
+    font-family: Kanit;
+    font-size: 53px;
+    font-weight: 700; 
+    background-clip: text;
+    text-fill-color: transparent;
+
+    text-shadow: 0px 0px 10.5706px #1979E8;   
+}
+
+/* Project */
+.projects{
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project{
+    height: 750px;
+    padding: 0 70px;
+}
+.projects .title{
+    color: #06090F;
+}
+
+.project .title {
+    font-size: 25px;
+}
+
+.obj-content{
+    padding-left: 80px;
+}
+
+a{
+    text-decoration: none;  
+}
+
+.img{
+    margin-left: 20px;
+    border-radius: 10px;
 }
