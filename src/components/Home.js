@@ -11,7 +11,7 @@ function Home(props){
             <span className="title brace name">Bijesh Singha.</span>
             <br/>
             <span className="title">Front-end developer.</span><span className="title brace"> |</span></div>
-            <img className="img" scr={homeImg} alt="coding-guy"/>
+            <img scr={homeImg} alt="coding-guy"/>
         </div>
     )
 }

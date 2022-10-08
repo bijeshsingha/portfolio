@@ -2,13 +2,17 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     overflow: overlay;
-    min-width: 600px;
 }
 
 .container {
+    overflow: overlay;
     background:white;
 }
 
@@ -62,6 +66,10 @@ body {
     cursor: pointer;
 }
 
+.header:hover {
+    color: white;
+}
+
 .selected {
     background: linear-gradient(180deg, #1979E8 0%, #03A3FF 100%);
     border-radius: 6px;
@@ -95,7 +103,7 @@ body {
     height: 90vh;
     display: flex;
     gap: 5rem;
-    padding: 25vh;
+    padding: 25vh 20vw;
     background: #06090F;
 }
 
@@ -116,7 +124,8 @@ body {
 
 /* Project */
 .projects{
-    padding: 30px 50px;
+    margin-top: -100px;
+    padding: 150px 50px;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -125,6 +134,10 @@ body {
 .project{
     height: 750px;
     padding: 0 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .projects .title{
     color: #06090F;
@@ -142,7 +155,74 @@ a{
     text-decoration: none;  
 }
 
+a:hover{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:active{
+    text-decoration: none;
+    color: inherit;
+}
+
 .img{
-    margin-left: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 5rem;
+    margin: 20px;
+    overflow: auto;
+    width: 50%;
+    height: 900px;
+    padding: 0 30px;
+    scroll-behavior: smooth;
+}
+
+.child{
     border-radius: 10px;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+  .child {
+    width: 350px;
+    height: 200px;
+  }
+
+  .img{
+    width: 100%;
+  }
+
+  body .projects .title{
+    font-size: 20px;
+  }
+
+  .project{
+        height: 750px;
+        margin-left: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    .projects{
+        padding: 150px 0;
+    }
+}
+
+.followMe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.icon {
+    cursor: pointer;
 }

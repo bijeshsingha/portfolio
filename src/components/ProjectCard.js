@@ -27,8 +27,11 @@ function ProjectCard(props) {
             </div>
         {`}`}
       </div>
-      <img className="img" src={props.image1} alt="quiz-app1" width="800px"/>
-      <img className="img" src={props.image2} alt="quiz-app2" width="800px"/>
+      <div className="img">
+        <a href={props.url} target="_blank" rel="noreferrer"><img className="child" src={props.image1} alt="quiz-app1" width="700px"/></a>
+        {props.image2 && <a href={props.url} target="_blank" rel="noreferrer"><img className="child" src={props.image2} alt="quiz-app2" width="700px"/></a>}
+        {props.image3 && <a href={props.url} target="_blank" rel="noreferrer"><img className="child" src={props.image3} alt="quiz-app2" width="700px"/></a>}
+      </div>
     </div>
   );
 }
