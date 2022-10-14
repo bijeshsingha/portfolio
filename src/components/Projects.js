@@ -12,10 +12,12 @@ import img111 from "../assets/tenzies/img1.png";
 import img222 from "../assets/tenzies/img2.png";
 import img333 from "../assets/tenzies/img3.png";
 
+import ToTop from "./ToTop";
+
 function Projects(props) {
   return (
-    <div id="projects" className="projects">
-      <div className="title">
+    <div id="projects" className="projects" ref={props.ref}>
+      <div className="title black">
         <span className="brace">{`[ `}</span>
         {"Projects"}
         <span className="brace">{` ]`}</span>
@@ -50,6 +52,7 @@ function Projects(props) {
         url="https://tenzies-game12345.netlify.app/"
         github="https://github.com/bijeshsingha/tenzies"
       />
+      <ToTop />
     </div>
   );
 }

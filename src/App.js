@@ -11,16 +11,28 @@ import Home from './components/Home';
 function App() {
 
   const [state, setState] = React.useState(0)
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const watchWidth = () => {
+    setWidth(window.innerWidth);
+  };
+  React.useEffect(() => {
+    window.addEventListener("resize", watchWidth);
+
+    return () => {
+      window.removeEventListener("resize", watchWidth);
+    };
+  }, []);
+  React.useEffect(()=>window.scrollTo(0,0),[])
 
   return (
     <div className="container">
-      <Navbar state={state} setState={setState} />
       <div className="main-content">
-        {(state===0 || state===1) && <><Home/><Projects /></>}
-        {state===2 && <About/>}
-        {state===3 && <Contact/>}
+        <Navbar state={state} setState={setState} width={width}/>
+        {(state === 0 || state === 1) && <><Home width={width}/><Projects/></>}
+        {state === 2 && <About setState={setState}/>}
+        {state === 3 && <Contact />}
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

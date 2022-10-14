@@ -1,18 +1,24 @@
 import React from "react";
 
 function Navbar(props) {
-  return (
-    <div className="navbar">
-      <div className="title">
-        <span className="brace">{`{ `}</span>
+
+  const title = (<div className="title">
+        <span onClick={window.scrollTo({top: 0, left: 0, behavior: 'auto'})} className="brace">{`{ `}</span>
         {"bijeshsingha.dev"}
         <span className="brace">{` }`}</span>
-      </div>
+      </div>)
+
+  return (
+    <div className="navbar text2">
+      {title}
       <div
         className={`${props.state === 0 && "selected"} header`}
-        onClick={() => props.setState(0)}
+        onClick={() => {
+          props.setState(0)
+          window.scrollTo({top: 0, left: 0, behavior: 'auto'})
+        }}
       >
-        <a href="#">Home</a>
+        Home
       </div>
       <div
         className={`${props.state === 1 && "selected"} header`}
