@@ -705,7 +705,10 @@ a:active {
 
   .top-button {
     padding: 0px;
+    padding-right: 9px;
+    padding-bottom: 9px;
     align-items: right;
+    margin-top: 10px;
   }
 
   .about-buttons {
@@ -772,7 +775,7 @@ a:active {
   }
 
   .contact-form .hire-me {
-    padding: 0;
+    padding: 0 20px;
   }
 
   .new-form .hire-me {

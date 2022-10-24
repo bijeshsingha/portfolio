@@ -125,8 +125,8 @@ function About(props) {
           </div>
         </div>
       </div>
-      <ToTop />
     </div>
+    <ToTop />
     </>
   );
 }
