@@ -7,8 +7,11 @@ import insta from "../assets/insta.png"
 function Footer(props){
     return (
         <div className="footer">
-            <span>bijeshsingha.dev | 2022</span>
+            <div>
             <span>Made with 💙 by Bijesh Singha</span>
+            <br/>
+            <span>© 2022 by Bijesh Singha.</span>   
+            </div>
             <div className="followMe">
             <span>Follow </span>
             <a href="https://github.com/bijeshsingha" target="_blank" rel="noreferrer"><img className="icon" src={github} alt="github" width="20px"/></a>

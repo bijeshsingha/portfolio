@@ -1,5 +1,5 @@
 import React from "react";
-import profilePic from "../assets/insta.png";
+import profilePic from "../assets/profile.png";
 import github from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
 import insta from "../assets/insta.png";
@@ -7,11 +7,11 @@ import downArrow from "../assets/DownArrow.svg";
 import rightArrow from "../assets/RightArrow.svg";
 import Card from "./Card";
 import SkillsCard from "./SkillsCard";
-
+import ToTop from "./ToTop";
 
 function About(props) {
-
   return (
+    <>
     <div id="about" className="about">
       <div className="profile-card">
         <img className="profile-pic" src={profilePic} alt="profile-pic" />
@@ -56,31 +56,78 @@ function About(props) {
           React, JavaScript. And building projects to level up my skills to
           create more efficient and functional interface.
         </span>
-          <a className="button" href="#experience-card" rel="noreferrer">
+        <a className="button" href="#experience-card" rel="noreferrer">
           <img src={downArrow} alt="down arrow" width="70px" />
-          </a>
+        </a>
 
         <div id="experience-card" className="experience-card">
           <span className="title black">Work Experience</span>
-          <Card period="July 2021 - Oct 2021" company="Larsen & Toubro Infotech Ltd." desg="Graduate Engineering Trainee" location="Mumbai"/>
-          <Card period="Oct 2021 - Present" company="Larsen & Toubro Infotech Ltd." desg="QA Engineer" location="Chennai"/>
+          <Card
+            period="July 2021 - Oct 2021"
+            company="Larsen & Toubro Infotech Ltd."
+            desg="Graduate Engineering Trainee"
+            location="Mumbai"
+          />
+          <Card
+            period="Oct 2021 - Present"
+            company="Larsen & Toubro Infotech Ltd."
+            desg="QA Engineer"
+            location="Chennai"
+          />
         </div>
         <div id="education-card" className="experience-card">
           <span className="title black">Education</span>
-          <Card period="2017 - 2021" company="National Institute of Technology Silchar" desg="Bachelor of Technology, Mechanical Engineering" location="Silchar, Assam"/>
-          <Card period="2008 - 2017" company="Gurukul Grammar Senior Secondary School" desg="Middle School and Higher Secondary" location="Guwahati, Assam"/>
-          <Card period="2003 - 2008" company="KV, Dholchera" desg="Pre School" location="Cachar, Assam"/>
+          <Card
+            period="2017 - 2021"
+            company="National Institute of Technology Silchar"
+            desg="Bachelor of Technology, Mechanical Engineering"
+            location="Silchar, Assam"
+          />
+          <Card
+            period="2008 - 2017"
+            company="Gurukul Grammar Senior Secondary School"
+            desg="Middle School and Higher Secondary"
+            location="Guwahati, Assam"
+          />
+          <Card
+            period="2003 - 2008"
+            company="KV, Dholchera"
+            desg="Pre School"
+            location="Cachar, Assam"
+          />
         </div>
         <div id="education-card" className="experience-card">
           <span className="title black">Skillset</span>
-          <SkillsCard skills={["HTML", "CSS", "React", "JavaScript", "Java", "C/C++", "OOPs"]}/>
+          <SkillsCard
+            skills={[
+              "HTML",
+              "CSS",
+              "React",
+              "JavaScript",
+              "Java",
+              "C/C++",
+              "OOPs",
+            ]}
+          />
           <div className="about-buttons">
-          <a href="#projects" onClick={() => props.setState(1)} className="hire-me"><span className="title">Projects</span><img src={rightArrow} alt="right arrow" width="40px"/></a>
-          <button onClick={() => props.setState(3)} className="hire-me"><span className="title">Hire me</span><img src={rightArrow} alt="right arrow" width="40px"/></button>
+            <a
+              href="#projects"
+              onClick={() => props.setState(1)}
+              className="hire-me"
+            >
+              <span className="title">Projects</span>
+              <img className="buttonIcon" src={rightArrow} alt="right arrow" width="40px" />
+            </a>
+            <button onClick={() => props.setState(3)} className="hire-me">
+              <span className="title">Hire me</span>
+              <img className="buttonIcon" src={rightArrow} alt="right arrow" width="40px" />
+            </button>
           </div>
         </div>
       </div>
+      <ToTop />
     </div>
+    </>
   );
 }
 

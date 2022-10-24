@@ -1,7 +1,6 @@
 import React from "react";
 
 function SkillsCard(props) {
-  console.log(props.skills)
     return (
           <div className="box">
             <span className="title">{props.skills[0]}</span>
