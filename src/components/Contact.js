@@ -150,7 +150,7 @@ function Contact(props) {
             </div> 
       </div>
     </div>
-    <ToTop/>
+    {props.width < 700 && <ToTop/>}
     </>
   );
 }

@@ -449,7 +449,7 @@ a:active {
 
 .contact {
   display: flex;
-  height: 100vh;
+  height: calc(100vh - 192px);
 }
 .contact .hire-me {
   padding: 0 40px;

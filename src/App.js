@@ -33,7 +33,7 @@ function App() {
       <div className={`${isMenu && "hide"} main-content`}>
         {(state === 0 || state === 1) && <><Home width={width} /><Projects width={width}/></>}
         {state === 2 && <About setState={setState}/>}
-        {state === 3 && <Contact state={state}/>}
+        {state === 3 && <Contact state={state} width={width}/>}
         <Footer/>
       </div>
     </div>
