@@ -25,7 +25,6 @@ function Home(props) {
           <img className="buttonIcon" src={rightArrow} alt="right arrow" width="40px" />
         </a>
       </div>
-      {props.width > 1064 && <img width="500px" scr={homeImg} alt="coding-guy" />}
     </div>
   );
 }

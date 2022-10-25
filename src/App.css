@@ -189,7 +189,7 @@ body {
 .projects {
   margin-top: -100px;
   padding: 150px 50px;
-  padding-bottom: 0;
+  padding-bottom: 70px;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -265,13 +265,13 @@ a:active {
 
 /* bring to top button */
 .top-button {
-  margin-left: auto;
-  position: relative;
+  z-index: 99;
+  right: 0;
+  position: absolute;
   display: flex;
   justify-content: right;
   width: 100px;
-  margin-top: -10px;
-  padding-bottom: 20px;
+  margin-top: -80px;
   padding-right: 30px;
 }
 
@@ -586,9 +586,8 @@ a:active {
 
   .projects {
     min-width: none;
-    padding: 0;
-    padding-top: 100px;
-    margin-top: 0;
+    padding: 100px 0;
+    margin-top: -10px;
   }
 
   .project {
@@ -708,7 +707,7 @@ a:active {
     padding-right: 9px;
     padding-bottom: 9px;
     align-items: right;
-    margin-top: 10px;
+    margin-top: -70px;
   }
 
   .about-buttons {
