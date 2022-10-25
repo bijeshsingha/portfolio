@@ -1,4 +1,5 @@
 import React from "react";
+import downArrow from "../assets/DownArrow.svg";
 
 function ProjectCard(props) {
   return (
@@ -36,13 +37,13 @@ function ProjectCard(props) {
         </div>
         {`}`}
       </div>
-      <div className="img">
+      <div className="img-section">
         <a href={props.url} target="_blank" rel="noreferrer">
           <img
             className="child"
             src={props.image1}
             alt="quiz-app1"
-            width="500px"
+            width="1000px"
           />
         </a>
         {props.image2 && (
@@ -51,17 +52,7 @@ function ProjectCard(props) {
               className="child"
               src={props.image2}
               alt="quiz-app2"
-              width="500px"
-            />
-          </a>
-        )}
-        {props.image3 && (
-          <a href={props.url} target="_blank" rel="noreferrer">
-            <img
-              className="child"
-              src={props.image3}
-              alt="quiz-app2"
-              width="500px"
+              width="1000px"
             />
           </a>
         )}
