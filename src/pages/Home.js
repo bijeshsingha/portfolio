@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import homeImg from "../assets/JS.svg";
 import rightArrow from "../assets/RightArrow.svg";
 
@@ -17,13 +18,13 @@ function Home(props) {
         <span className="brace"> |</span>
         <br/>
         <br/>
-        <a
-          href="#projects"
-          className="hire-me"
+        <Link
+            to="/projects"
+            className="hire-me"
         >
           <span className="title">Projects</span>
           <img className="buttonIcon" src={rightArrow} alt="right arrow" width="40px" />
-        </a>
+        </Link>
       </div>
     </div>
   );

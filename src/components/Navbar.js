@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Navbar(props) {
   const title = (
@@ -11,43 +12,34 @@ function Navbar(props) {
 
   const menu = (
     <>
-      <div
-        className={`${props.state === 0 && "selected"} header`}
-        onClick={() => {
-          props.setState(0);
-          window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-          props.setIsMenu(false);
-        }}
+      <NavLink
+        to="/"
+        className={({ isActive }) => (isActive ? "header selected" : "header")}
+        style={({ isActive }) => ({ color: isActive ? "white" : "" })}
       >
-        <a href="#">Home</a>
-      </div>
-      <div
-        className={`${props.state === 1 && "selected"} header`}
-        onClick={() => {
-          props.setState(1);
-          props.setIsMenu(false);
-        }}
+        Home
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "header selected" : "header")}
+        to="/projects"
+        style={({ isActive }) => ({ color: isActive ? "white" : "" })}
       >
-        <a href="#projects">Projects</a>
-      </div>
-      <div
-        className={`${props.state === 2 && "selected"} header`}
-        onClick={() => {
-          props.setState(2);
-          props.setIsMenu(false);
-        }}
+        Projects
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "header selected" : "header")}
+        to="/about"
+        style={({ isActive }) => ({ color: isActive ? "white" : "" })}
       >
-        <a href="#">About Me</a>
-      </div>
-      <div
-        className={`${props.state === 3 && "selected"} header`}
-        onClick={() => {
-          props.setState(3);
-          props.setIsMenu(false);
-        }}
+        About Me
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "header selected" : "header")}
+        to="/contact"
+        style={({ isActive }) => ({ color: isActive ? "white" : "" })}
       >
-        <a href="#contact">Contact</a>
-      </div>
+        Contact
+      </NavLink>
     </>
   );
 

@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 import github from "../assets/github.png"
 import linkedin from "../assets/linkedin.png"
 import insta from "../assets/insta.png"
-import ToTop from "./ToTop";
+import ToTop from "../components/ToTop";
 
 function Contact(props) {
   const [formData, setFormData] = React.useState({

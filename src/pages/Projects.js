@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../components/ProjectCard";
 import img1 from "../assets/quizzical/Browser2.png";
 import img2 from "../assets/quizzical/Browser3.png";
 import img3 from "../assets/quizzical/Browser1.png";
@@ -15,7 +15,7 @@ import img333 from "../assets/tenzies/img3.png";
 import dashboard1 from "../assets/browser.png";
 import dashboard2 from "../assets/browser2.png";
 
-import ToTop from "./ToTop";
+import ToTop from "../components/ToTop";
 
 function Projects(props) {
   return (

@@ -5,9 +5,9 @@ import linkedin from "../assets/linkedin.png";
 import insta from "../assets/insta.png";
 import downArrow from "../assets/DownArrow.svg";
 import rightArrow from "../assets/RightArrow.svg";
-import Card from "./Card";
-import SkillsCard from "./SkillsCard";
-import ToTop from "./ToTop";
+import Card from "../components/Card";
+import SkillsCard from "../components/SkillsCard";
+import ToTop from "../components/ToTop";
 
 function About(props) {
   return (

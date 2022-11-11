@@ -91,6 +91,18 @@ body {
   }
 }
 
+@keyframes identifier-left {
+  0% { 
+    opacity: 0;
+    transform: translateX(-100%)
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
 .mobile-menu .selected {
   background: none;
   color: white;
@@ -134,7 +146,6 @@ body {
   background: linear-gradient(180deg, #1979e8 0%, #03a3ff 100%);
   border-radius: 6px;
   font-weight: 600;
-  color: white;
 }
 
 .black {
@@ -162,12 +173,13 @@ body {
 
 /* Home */
 .home {
-  height: 90vh;
+  height: calc(100vh - 192px);
   display: flex;
   justify-content: space-between;
   gap: 5rem;
   padding: 250px 200px;
   background: #06090f;
+  animation: identifier 0.5s ease;
 }
 
 .home .title {
@@ -194,6 +206,7 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
+  animation: identifier-left 0.5s ease;
 }
 
 .project {
@@ -324,6 +337,7 @@ a:active {
   margin: 0;
   padding: 0;
   padding-left: 100px;
+  animation: identifier-left 0.5s ease-in-out;
 }
 
 .about_content {
@@ -472,6 +486,7 @@ a:active {
 .contact {
   display: flex;
   height: calc(100vh - 192px);
+  animation: identifier-left 0.5s ease;
 }
 .contact .hire-me {
   padding: 0 40px;
