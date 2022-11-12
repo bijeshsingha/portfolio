@@ -8,6 +8,7 @@ import rightArrow from "../assets/RightArrow.svg";
 import Card from "../components/Card";
 import SkillsCard from "../components/SkillsCard";
 import ToTop from "../components/ToTop";
+import { Link, NavLink } from "react-router-dom";
 
 function About(props) {
   return (
@@ -110,18 +111,17 @@ function About(props) {
             ]}
           />
           <div className="about-buttons">
-            <a
-              href="#projects"
-              onClick={() => props.setState(1)}
+            <NavLink
+              to="/projects"
               className="hire-me"
             >
               <span className="title">Projects</span>
               <img className="buttonIcon" src={rightArrow} alt="right arrow" width="40px" />
-            </a>
-            <button onClick={() => props.setState(3)} className="hire-me">
+            </NavLink>
+            <NavLink to="/contact" className="hire-me">
               <span className="title">Hire me</span>
               <img className="buttonIcon" src={rightArrow} alt="right arrow" width="40px" />
-            </button>
+            </NavLink>
           </div>
         </div>
       </div>

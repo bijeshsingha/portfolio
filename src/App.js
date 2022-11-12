@@ -10,11 +10,6 @@ import {Routes, Route, Link} from 'react-router-dom'
 
 
 function App() {
-
-
-  
-
-  const [state, setState] = React.useState(0)
   const [width, setWidth] = React.useState(window.innerWidth)
   const [isMenu,setIsMenu] = React.useState(false)
   const watchWidth = () => {
@@ -33,10 +28,12 @@ function App() {
 
   return (
     <div className="container">
-      <Navbar state={state} setState={setState} width={width} setIsMenu={setIsMenu} isMenu={isMenu}/>
+      <Navbar width={width} setIsMenu={setIsMenu} isMenu={isMenu}/>
       <div className={`${isMenu && "hide"} main-content`}>
         <Routes>
           <Route path="/" element={<Home/>} />
+          <Route path="/portfolio" element={<Home/>} />
+          <Route path="/home" element={<Home/>} />
           <Route path="/projects" element={<Projects/>} />
           <Route path="/contact" element={<Contact/>} />
           <Route path="/about" element={<About/>} />
