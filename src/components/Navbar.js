@@ -18,7 +18,7 @@ function Navbar() {
         to="/"
         className={({ isActive }) => (isActive ? "header selected" : "header")}
         style={({ isActive }) => ({ color: isActive ? "white" : "" })}
-        onClick={() => setIsMenu((prev) => !prev)}
+        onClick={() => setIsMenu(false)}
       >
         Home
       </NavLink>
@@ -26,7 +26,7 @@ function Navbar() {
         className={({ isActive }) => (isActive ? "header selected" : "header")}
         to="/projects"
         style={({ isActive }) => ({ color: isActive ? "white" : "" })}
-        onClick={() => setIsMenu((prev) => !prev)}
+        onClick={() => setIsMenu(false)}
       >
         Projects
       </NavLink>
@@ -34,7 +34,7 @@ function Navbar() {
         className={({ isActive }) => (isActive ? "header selected" : "header")}
         to="/about"
         style={({ isActive }) => ({ color: isActive ? "white" : "" })}
-        onClick={() => setIsMenu((prev) => !prev)}
+        onClick={() => setIsMenu(false)}
       >
         About Me
       </NavLink>
@@ -42,7 +42,7 @@ function Navbar() {
         className={({ isActive }) => (isActive ? "header selected" : "header")}
         to="/contact"
         style={({ isActive }) => ({ color: isActive ? "white" : "" })}
-        onClick={() => setIsMenu((prev) => !prev)}
+        onClick={() => setIsMenu(false)}
       >
         Contact
       </NavLink>
