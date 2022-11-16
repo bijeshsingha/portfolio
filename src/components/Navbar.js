@@ -1,7 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useStateContext } from "../contexts/ContextProvider";
 
-function Navbar(props) {
+function Navbar() {
+  const { width, isMenu, setIsMenu } = useStateContext()
   const title = (
     <div className="title">
       <span className="brace">{`{ `}</span>
@@ -16,6 +18,7 @@ function Navbar(props) {
         to="/"
         className={({ isActive }) => (isActive ? "header selected" : "header")}
         style={({ isActive }) => ({ color: isActive ? "white" : "" })}
+        onClick={() => setIsMenu((prev) => !prev)}
       >
         Home
       </NavLink>
@@ -23,6 +26,7 @@ function Navbar(props) {
         className={({ isActive }) => (isActive ? "header selected" : "header")}
         to="/projects"
         style={({ isActive }) => ({ color: isActive ? "white" : "" })}
+        onClick={() => setIsMenu((prev) => !prev)}
       >
         Projects
       </NavLink>
@@ -30,6 +34,7 @@ function Navbar(props) {
         className={({ isActive }) => (isActive ? "header selected" : "header")}
         to="/about"
         style={({ isActive }) => ({ color: isActive ? "white" : "" })}
+        onClick={() => setIsMenu((prev) => !prev)}
       >
         About Me
       </NavLink>
@@ -37,6 +42,7 @@ function Navbar(props) {
         className={({ isActive }) => (isActive ? "header selected" : "header")}
         to="/contact"
         style={({ isActive }) => ({ color: isActive ? "white" : "" })}
+        onClick={() => setIsMenu((prev) => !prev)}
       >
         Contact
       </NavLink>
@@ -46,8 +52,8 @@ function Navbar(props) {
   const hamberger = (
     <div
       id="hamburger-icon"
-      className={`hamburger-icon ${props.isMenu && "open"}`}
-      onClick={() => props.setIsMenu((prev) => !prev)}
+      className={`hamburger-icon ${isMenu && "open"}`}
+      onClick={() => setIsMenu((prev) => !prev)}
     >
       <div className="bar1"></div>
       <div className="bar2"></div>
@@ -59,9 +65,9 @@ function Navbar(props) {
     <>
       <div className="navbar text2">
         {title}
-        {props.width > 1064 ? menu : hamberger}
+        {width > 1064 ? menu : hamberger}
       </div>
-      {props.isMenu && <div className="mobile-menu text2">{menu}</div>}
+      {isMenu && <div className="mobile-menu text2">{menu}</div>}
     </>
   );
 }

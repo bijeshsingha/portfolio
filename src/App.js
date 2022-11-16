@@ -6,12 +6,12 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
-import {Routes, Route, Link} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
+import { useStateContext } from "./contexts/ContextProvider";
 
 
 function App() {
-  const [width, setWidth] = React.useState(window.innerWidth)
-  const [isMenu,setIsMenu] = React.useState(false)
+  const { setWidth, isMenu, setIsMenu} = useStateContext()
   const watchWidth = () => {
     setWidth(window.innerWidth);
     if(window.innerWidth > 1064){
@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className="container">
-      <Navbar width={width} setIsMenu={setIsMenu} isMenu={isMenu}/>
+      <Navbar/>
       <div className={`${isMenu && "hide"} main-content`}>
         <Routes>
           <Route path="/" element={<Home/>} />
