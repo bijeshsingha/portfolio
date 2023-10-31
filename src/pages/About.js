@@ -51,8 +51,8 @@ function About(props) {
           am always looking for new challenges and ways to improve my abilities.
         </span>
         <span className="normal-text">
-          I am a Mechanical Engineer by degree, and I have been working in an IT
-          company as a QA Engineer for a year and also developing my frontend
+          I am a Mechanical Engineer by degree, and I had worked in an IT
+          company as a QA Engineer for 2 years and also developing my frontend
           development skills alongside. I have acquired skills in HTML, CSS,
           React, JavaScript. And building projects to level up my skills to
           create more efficient and functional interface.
