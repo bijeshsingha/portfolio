@@ -70,7 +70,7 @@ function About(props) {
             location="Mumbai"
           />
           <Card
-            period="Oct 2021 - Present"
+            period="Oct 2021 - Jun 2023"
             company="Larsen & Toubro Infotech Ltd."
             desg="QA Engineer"
             location="Chennai"
